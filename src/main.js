@@ -1,8 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import vant from "vant";
+import "vant/lib/index.css";
 
-Vue.config.productionTip = false
+Vue.use(vant);
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+    render: (h) => h(App),
+}).$mount("#app");
