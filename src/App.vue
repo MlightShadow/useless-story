@@ -1,22 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <!--资源栏位-->
 
-    <field msg="Welcome to Your Vue.js App"/>
+    <field msg="Welcome to Your Vue.js App" />
     <!-- 选择 -->
+    {{ $store.state.count }}
   </div>
 </template>
 
 <script>
-import field from './components/farm.vue'
+import field from "./components/farm.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    field
-  }
-}
+    field,
+  },
+};
 </script>
 
 <style>
