@@ -1,12 +1,11 @@
 import vue from "vue";
 import vuex from "vuex";
+import data from "./data"
 
 vue.use(vuex);
 
-const state = {
-    count: 0,
-};
-
 export default new vuex.Store({
-    state,
+    modules:{
+        data
+    }
 });
