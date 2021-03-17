@@ -14,11 +14,30 @@ import field from "./components/farm.vue";
 
 export default {
     name: "App",
+    data() {
+        return {
+            timer: {}
+        }
+    },
     components: {
         field,
     },
     created() {
+        this.$store.dispatch('load');
         console.log(this.$store.getters.get);
+    },
+    methods:{
+        consul(){
+            this.$store.dispatch('paytax')
+            this.$store.dispatch('save');
+            console.log("ceshi");
+        }
+    },
+    mounted() {
+        this.timer = setInterval(this.consul, 1000);
+    },
+    beforeDestroy() {
+        clearInterval(this.timer);
     },
 };
 </script>
